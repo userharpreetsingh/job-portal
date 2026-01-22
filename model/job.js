@@ -29,7 +29,7 @@ const jobSchema= new mongoose.Schema({
         type:String,
         required:[true,"job city is required"],
     },
-    fixedsalary:{
+    fixedSalary:{
         type:Number,
         minLength:[4,"job fixedsalary must constain atleast 4 characters"],
         maxLength:[9,"job fixedsalary does not excceds 9 characters"],
