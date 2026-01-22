@@ -60,7 +60,7 @@ export const getMyJobs=catchAysncError(async(req,res,next)=>{
 export const updateJob = catchAysncError(async(req,res,next)=>{
   const {role}=req.user;
   if(role === "Job Seeker"){
-    return next (new ErrorHandler("job seeker is not aloowed to access this resources",400))
+    return next (new ErrorHandler("job seeker is not allowed to access this resources",400))
   }
   const {id} = req.params;
   let job = await Job.findById(id)
